@@ -1,0 +1,148 @@
+body{
+    justify-content: center;
+    background: #FFF0F5;
+}
+
+.chat-container {
+    flex-grow: 1; /* Allow chat-box to grow and take available space */
+    overflow-y: auto;/* Add some padding for spacing */
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column; /* Display messages from bottom to top */
+    overflow-y: auto; /* Add scroll when needed */
+    max-height: 70vh; /* Adjust the max height of the chat box */
+}
+
+.company-logo{
+    position: absolute;
+    top: 15px;
+    left : 16px;
+    width: 150px;
+}
+.user-message,
+.bot-message {
+    padding: 10px;
+    margin: 5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.segment{
+    display: flex;
+    justify-content: lower right ;
+    margin-top: 100px;
+}
+
+.user-message {
+    background-color: #FF8787;
+    align-self: flex-end;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #E26868;
+}
+
+#send-button{
+    margin-top: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#chat-container{
+    max-width: 500px;
+}
+
+#user-input{
+    max-width: 460px;
+    align-items: center;
+
+}
+
+#video {
+    height: 240px;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+#snapshot {
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.camera{
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.chat-container {
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.img-area{
+    position: relative;
+    height: 240px;
+    background: #ccc;
+    margin-top: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-area .icon{
+    font-size: 100px;
+}
+
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 100;
+}
+.img-area::before {
+	content: attr(data-img);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+
+	font-weight: 500;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .3s ease;
+	z-index: 200;
+}
+.img-area.active:hover::before {
+	opacity: 1;
+}
+
+.img-area.active:hover::before {
+	opacity: 1;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <script src="https://kit.fontawesome.com/80bc2d3e11.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+
+    <div class="container text-center">
+        <div class="chat-header">
+            <h1>MEDICOBOT</h1>
+        </div>
+        <div class="row">
+            <div class="col chat-container">
+                <div class="camera">
+                    <video id="video" autoplay></video>
+                    <button id="snapshot" type="button" class="btn btn-outline-dark">Click</button>
+                </div>
+            </div>
+            <div class="col chat-container">
+                <div class="img-area icon" id="img-area">
+                    <i class="fa-solid fa-cloud-arrow-up fa-beat-fade fa-4x"></i>
+                    <h3>Upload image</h3>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto button">
+                    <form action="/upload_image" method="POST" enctype="multipart/form-data">
+                        <input type="file" name="image" accept="image/*">
+                        <input class="btn btn-outline-dark select-img" type="submit" value="Upload">
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a class="btn btn-outline-secondary" href="{{ url_for('chat') }}" role="button">Bot</a>
+
+        </div>
+
+        <form action=""></form>
+
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+
+</html>
