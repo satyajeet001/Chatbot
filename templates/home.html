@@ -18,9 +18,9 @@
                 </h2>
                 <p class="mt-2 text-sm text-gray-400">Lorem ipsum is placeholder text.</p>
             </div>
-            <div class="flex w-full gap-10">
+            <div class="flex flex-col md:flex-row w-full gap-10">
 
-                <form class="mt-8 space-y-3 w-96" action="/upload_image" method="POST" enctype="multipart/form-data">
+                <form class="mt-8 space-y-3 md:w-96" action="/upload_image" method="POST" enctype="multipart/form-data">
                     <div class="grid grid-cols-1 space-y-2">
                         <label class="text-sm font-bold text-gray-500 tracking-wide">Open Camera</label>
                         <div class="flex items-center justify-center w-full">
@@ -49,16 +49,16 @@
                 </form>
 
 
-                <form class="mt-8 space-y-3 w-96" action="/upload_image" method="POST" enctype="multipart/form-data">
+                <form class="mt-8 space-y-3 md:w-96" action="/upload_image" method="POST" enctype="multipart/form-data">
                     <div class="grid grid-cols-1 space-y-2">
                         <label class="text-sm font-bold text-gray-500 tracking-wide">Attach Document</label>
                         <div class="flex items-center justify-center w-full">
                             <label
-                                class="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center">
+                                class="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-4 md:p-10 group text-center">
                                 <div
                                     class="h-full w-full text-center flex flex-col items-center justify-center items-center  ">
-                                    <div class="flex flex-auto max-h-48 w-2/5 mx-auto -mt-10">
-                                        <img class="has-mask h-36 object-center"
+                                    <div class="flex flex-auto max-h-48 md:w-2/5 md:mx-auto md:-mt-10">
+                                        <img class=" object-center w-36 h-36 md:h-full md:w-full"
                                             src="https://img.freepik.com/free-vector/image-upload-concept-landing-page_52683-27130.jpg?size=338&ext=jpg"
                                             alt="freepik image">
 
@@ -69,7 +69,7 @@
 
                                     </p> -->
 
-                                    <input type="file" name="image" accept="image/*">
+                                    <input type="file" class="text-sm md:text-base " name="image" accept="image/*">
                                 </div>
                         </div>
                         <!-- <input type="file" class="hidden"> -->
@@ -79,7 +79,7 @@
                         <span>File type: doc,pdf,types of images</span>
                     </p>
                     <input
-                        class="w-full flex justify-center bg-blue-500 text-gray-100 p-4  rounded-full tracking-wide
+                        class="w-full text-sm md:text-xl flex justify-center bg-blue-500 text-gray-100 p-4  rounded-full tracking-wide
                                     font-semibold  focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300 btn btn-outline-dark select-img"
                         type="submit" value="Upload">
                 </form>
